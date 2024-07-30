@@ -1,0 +1,15 @@
+<configuration>
+    <!-- Define the logging level for your application -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+    </root>
+
+    <!-- Specific logging level configuration for aspect -->
+    <logger name="com.example.sprintbootdemo.aspect.LoggingAspect" level="INFO" />
+</configuration>
