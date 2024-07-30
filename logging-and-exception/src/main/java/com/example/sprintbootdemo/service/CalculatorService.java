@@ -13,6 +13,10 @@ public class CalculatorService {
     private Calculator calculator;
 
     public ResponseEntity<Integer> add(int a, int b) {
+        if (a < 0 || b < 0) {
+            throw new IllegalArgumentException("a and b must be greater than 0");
+        }
+
         return new ResponseEntity<>(calculator.add(a, b), HttpStatus.OK);
     }
 
